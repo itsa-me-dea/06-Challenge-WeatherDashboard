@@ -1,123 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/">
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="Assets/style.css" />
-    <script src="https://kit.fontawesome.com/a23205ab6e.js" crossorigin="anonymous"></script>
-    </html>
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-</head>
-<!-- <body>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a23205ab6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Assets/style.css" /> 
     
-</body> -->
-<!-- body adapted from https://getbootstrap.com/docs/4.1/examples/jumbotron/ -->
+</head>
+
 <body>
-    <!-- title and search bar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-cloud-bolt"></i> Weather Dashboard</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- history to be added to navbar to be called later -->
-      
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href=# id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">History</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+    <header>
+        <nav class="row">
+            <!-- title -->
+            <div class="nav-wrapper col s12">
+                <a href="#" class="brand-logo center"><i class="fa-solid fa-cloud-bolt"></i> Weather Dashboard</a>
             </div>
-          </li>
-        </ul>
+            
+            <!-- search bar -->
+            <div class="nav-wrapper col s5 offset-s1 m5 offset-m1">
+              <form>
+                <div class="search-bar input-field">
+                  <input id="search" type="search" required placeholder="Search">
+                  <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                  <i class="material-icons black-text">close</i>
+                </div>
+              </form>
+            </div>
 
-        <!-- search form -->
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <!-- Search History -->
+            <div class="history input-field col s5 m5">
+                <select>
+                  <option value="" disabled selected>Search History</option>
+                  <option value="1">San Diego</option>
+                  <option value="2">Los Angeles</option>
+                  <option value="3">Dallas</option>
+                  <option value="4">Boston</option>
+                  <option value="5">New York</option>
+                </select>
+              </div>
+
+          </nav>
+    </header>
+
+    <div class="row">
+        <!-- main / today's forcast -->
+        <div class="today col s10 offset-s1 m10 offset-m1">
+          <div class="card row">
+            <div class="card-image col s6 m6"">
+              <img src="Assets/Images/rain.gif">
+            </div>
+            <div class="card-content col s4 m4">
+                <span class="card-title black-text">Card Title</span>
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 day forcast -->
+        <div class="col s2 offset-s1 m2 offset-m1">
+            <div class="card">
+              <div class="card-image">
+                <img src="Assets/Images/mostly-sunny.gif">
+                <span class="card-title black-text">Card Title</span>
+              </div>
+              <div class="card-content">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s2 m2">
+            <div class="card">
+              <div class="card-image">
+                <img src="Assets/Images/mostly-sunny.gif">
+                <span class="card-title black-text">Card Title</span>
+              </div>
+              <div class="card-content">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s2 m2">
+            <div class="card">
+              <div class="card-image">
+                <img src="Assets/Images/mostly-sunny.gif">
+                <span class="card-title black-text">Card Title</span>
+              </div>
+              <div class="card-content">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s2 m2">
+            <div class="card">
+              <div class="card-image">
+                <img src="Assets/Images/mostly-sunny.gif">
+                <span class="card-title black-text">Card Title</span>
+              </div>
+              <div class="card-content">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s2 m2">
+            <div class="card">
+              <div class="card-image">
+                <img src="Assets/Images/mostly-sunny.gif">
+                <span class="card-title black-text">Card Title</span>
+              </div>
+              <div class="card-content">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Wind: </li>
+                    <li>Humidity: </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
       </div>
-    </nav>
-
-    <main role="main">
-
-      <!-- Main jumbotron for daily weather call -->
-      <div class="jumbotron">
+    
+      <!-- footer -->
+      <footer class="page-footer">
         <div class="container">
-          <h1 class="display-3">Today </h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+          <div class="row">
+            <!-- <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div> -->
+            <div class="col l4 offset-l2 s12">
+
+            </div>
+          </div>
         </div>
+        <div class="footer-copyright">
+          <div class="container center">
+          Made with ❤ by itsa-me-dea
+          </div>
       </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div>
-        </div>
-
-        <hr>
-
-      </div> <!-- /container -->
-
-    </main>
-
-    <footer class="container">
-      <p>© Company 2017-2018</p>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="Assets/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-
+      </footer>
 </body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="Assets/script.js"></script>
 </html>
