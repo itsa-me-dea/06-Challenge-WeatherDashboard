@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified CSS from materializeCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- font-awesome API for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/a23205ab6e.js" crossorigin="anonymous"></script>
+
+    <!-- my CSS -->
     <link rel="stylesheet" href="Assets/style.css" /> 
     
 </head>
@@ -36,7 +41,7 @@
 
             <!-- Search History -->
             <div class="history input-field col s5 m5">
-                <select>
+                <select id="history">
                   <option value="" disabled selected>Search History</option>
                   <option value="1">San Diego</option>
                   <option value="2">Los Angeles</option>
@@ -57,7 +62,8 @@
               <img src="Assets/Images/rain.gif">
             </div>
             <div class="card-content col s4 m4">
-                <span class="card-title black-text">Card Title</span>
+              <span class="card-title black-text">San Diego</span>
+              <p><b class="black-text">Today</b></p>
                 <ul>
                     <li>Temperature: </li>
                     <li>Wind: </li>
@@ -72,7 +78,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="Assets/Images/mostly-sunny.gif">
-                <span class="card-title black-text">Card Title</span>
+                <span class="card-title black-text">Mon</span>
               </div>
               <div class="card-content">
                 <ul>
@@ -88,7 +94,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="Assets/Images/mostly-sunny.gif">
-                <span class="card-title black-text">Card Title</span>
+                <span class="card-title black-text">Tue</span>
               </div>
               <div class="card-content">
                 <ul>
@@ -104,7 +110,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="Assets/Images/mostly-sunny.gif">
-                <span class="card-title black-text">Card Title</span>
+                <span class="card-title black-text">Wed</span>
               </div>
               <div class="card-content">
                 <ul>
@@ -120,7 +126,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="Assets/Images/mostly-sunny.gif">
-                <span class="card-title black-text">Card Title</span>
+                <span class="card-title black-text">Thu</span>
               </div>
               <div class="card-content">
                 <ul>
@@ -136,7 +142,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="Assets/Images/mostly-sunny.gif">
-                <span class="card-title black-text">Card Title</span>
+                <span class="card-title black-text">Fri</span>
               </div>
               <div class="card-content">
                 <ul>
@@ -154,13 +160,7 @@
       <footer class="page-footer">
         <div class="container">
           <div class="row">
-            <!-- <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div> -->
-            <div class="col l4 offset-l2 s12">
-
-            </div>
+            <div class="col l4 offset-l2 s12"></div>
           </div>
         </div>
         <div class="footer-copyright">
@@ -170,8 +170,9 @@
       </div>
       </footer>
 </body>
-<!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript from materialize CSS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+<!-- my JS -->
 <script src="Assets/script.js"></script>
 </html>
